@@ -20,7 +20,7 @@ const Form = (props) => {
   return (
     <div>
       <Box sx={{ width: "100%", width: "60%", m: 1 }}>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h4" gutterBottom>
           Markov Model
         </Typography>
         <Typography variant="subtitle1" gutterBottom>

@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 
+import Header from "../components/Header";
 import Form from "../components/Form";
 import DisplayModel from "../components/DisplayModel";
 
@@ -12,6 +13,7 @@ const Home = (props) => {
 
   return (
     <Fragment>
+      <Header />
       <Form getStory={storyHandler} />
       <DisplayModel text={modeledStory} />
     </Fragment>
