@@ -21,7 +21,7 @@ const Form = (props) => {
       <Box
         component="form"
         sx={{
-          "& .MuiTextField-root": { m: 1, width: "90%" },
+          "& .MuiTextField-root": { m: 1, width: "60%" },
         }}
         noValidate
         autoComplete="off"
