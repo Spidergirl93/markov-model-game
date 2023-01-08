@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 
-import Form from "../components/homeComponents/input/Form";
-import DisplayModel from "../components/homeComponents/result/DisplayModel";
+import Form from "../components/Form";
+import DisplayModel from "../components/DisplayModel";
 
 const Home = (props) => {
   const [modeledStory, setModeledStory] = useState("");
