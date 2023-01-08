@@ -6,7 +6,7 @@ import DisplayModel from "../components/DisplayModel";
 const Home = (props) => {
   const [modeledStory, setModeledStory] = useState("");
   const storyHandler = (story) => {
-    console.log(story);
+    //Do the logic in here later
     setModeledStory((prev) => story);
   };
 

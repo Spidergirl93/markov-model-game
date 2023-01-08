@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
@@ -18,6 +19,15 @@ const Form = (props) => {
 
   return (
     <div>
+      <Box sx={{ width: "100%", width: "60%", m: 1 }}>
+        <Typography variant="h3" gutterBottom>
+          Markov Model
+        </Typography>
+        <Typography variant="subtitle1" gutterBottom>
+          TBA. Add some explainations about markove model and how it works.
+        </Typography>
+      </Box>
+
       <Box
         component="form"
         sx={{

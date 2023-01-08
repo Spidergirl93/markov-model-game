@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 
 const DisplayModel = (props) => {
   return (
-    <Box sx={{ width: "100%", maxWidth: 500, m: 1 }}>
+    <Box sx={{ width: "60%", m: 1 }}>
       <Typography variant="h6" gutterBottom>
         The markoved story!!
       </Typography>
