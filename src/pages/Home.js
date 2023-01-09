@@ -15,7 +15,7 @@ const Home = (props) => {
     <Fragment>
       <Header />
       <Form getStory={storyHandler} />
-      <DisplayModel text={modeledStory} />
+      {modeledStory !== '' ? <DisplayModel text={modeledStory} /> : <Fragment></Fragment>}
     </Fragment>
   );
 };

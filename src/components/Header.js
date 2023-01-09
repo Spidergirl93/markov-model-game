@@ -7,14 +7,16 @@ import Typography from "@mui/material/Typography";
 
 import Container from "@mui/material/Container";
 
-import ModelTrainingIcon from '@mui/icons-material/ModelTraining';
+import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
 
 function Header() {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <ModelTrainingIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <ModelTrainingIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap

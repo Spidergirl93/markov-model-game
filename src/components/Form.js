@@ -24,7 +24,13 @@ const Form = (props) => {
           Markov Model
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
-          TBA. Add some explainations about markove model and how it works.
+          A Markov Model models the current state of the system using the
+          previous states. The model used in this application is based on Markov
+          chain which is the simplest type of Markov Model. Based on Markov
+          chain, the current distribution for a variable is only based on its
+          distrubution on the previous states. here you can add any text and our
+          model will generate a story based on the words existing in the text
+          (nodes), and the words that are followed by them (transitions). Enjoy!
         </Typography>
       </Box>
 
@@ -38,8 +44,8 @@ const Form = (props) => {
       >
         <TextField
           id="outlined-textarea"
-          label="Please insert your story here"
-          placeholder="Your Story"
+          label="Please insert your text here"
+          placeholder="Your Text"
           multiline
           value={userInput}
           onChange={onChangeHandler}
