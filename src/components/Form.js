@@ -28,7 +28,7 @@ const Form = (props) => {
           previous states. The model used in this application is based on Markov
           Chain which is the simplest type of Markov Model. Based on Markov
           Chain, the current distribution for a variable is only based on its
-          distrubution on the previous states.
+          distribution on the previous states.
           <br /> <br /> Here you can add any text and our model will generate a
           story based on the words existing in the text (nodes), and the words
           that are followed by them (transitions). Enjoy!
