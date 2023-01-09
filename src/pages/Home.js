@@ -42,7 +42,7 @@ const Home = (props) => {
 
     // The length of the generated text is defined here by
     // setting the number of times that this loop occurs
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < parsedTxt.length; i++) {
       // Get the possible next states
       let possibilities = ngrams[currentWord];
       // To prevent printing just random numbers
