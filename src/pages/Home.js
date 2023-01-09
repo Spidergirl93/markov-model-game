@@ -16,7 +16,7 @@ const Home = (props) => {
     let ngrams = {};
     const parsedTxt = txt.match(/\b(\w+)\b/g);
 
-    for (let i = 0; i <= parsedTxt.length - order; i++) {
+    for (let i = 0; i < parsedTxt.length; i++) {
       let word = parsedTxt[i];
       if (!ngrams[word]) {
         ngrams[word] = [];
@@ -28,7 +28,10 @@ const Home = (props) => {
       // do anything to handle duplicates here
       let nextState = "";
       for (let j = 1; j < order; j++) {
-        nextState += parsedTxt[i + j] + " ";
+        const index = i + j;
+        if (index < parsedTxt.length) {
+          nextState += " " + parsedTxt[index] + " ";
+        }
       }
       ngrams[word].push(nextState);
     }
@@ -39,7 +42,7 @@ const Home = (props) => {
 
     // The length of the generated text is defined here by
     // setting the number of times that this loop occurs
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 10; i++) {
       // Get the possible next states
       let possibilities = ngrams[currentWord];
       // To prevent printing just random numbers
@@ -49,45 +52,13 @@ const Home = (props) => {
       // Pick a random element from the possible next transitions
       let index = Math.floor(Math.random() * possibilities.length);
       let next = possibilities[index];
-      result += " " + next;
+      result += next;
       // Get the last word of result
       currentWord = result.trim().split(" ").pop();
-      console.log(currentWord)
+      console.log(result);
     }
-    console.log('done')
 
     return result;
-
-    /* let ngrams = {};
-    for (let i = 0; i <= txt.length - order; i++) {
-      let gram = txt.substring(i, i + order);
-
-      if (!ngrams[gram]) {
-        ngrams[gram] = [];
-      }
-      //Duplicates here are in our favor since the more an item is, the higher chance it has to get picked
-      ngrams[gram].push(txt.charAt(i + order));
-    }
-    console.log(ngrams)
-    let currentGram = txt.substring(0, order);
-    let result = currentGram;
-
-    // Do this several times to get a longer text as the result
-    for (let i = 0; i < 1000; i++) {
-      // Get the possible next states
-      let possibilities = ngrams[currentGram];
-      //To prevent printing just random numbers
-      if (!possibilities) {
-        break;
-      }
-      // Pick a random element from the possible next transitions
-      let index = Math.floor(Math.random() * possibilities.length);
-      let next = possibilities[index];
-      result += next;
-      currentGram = result.substring(result.length - order);
-    }
-
-    return result; */
   };
 
   return (
