@@ -7,13 +7,14 @@ Feel free to try the application using [this link](https://markov-model-game.ver
 
 ## Demo 
 
-
-![Loading ...](demo/Demo.mp4)
+![Loading ...](visuals/demo/Demo.mp4)
 
 
 ## Description
 
 This web application is a simple implementation of Markov chain to generate new and hopefully meaningful texts from another text. Based on Markov chain, the current distribution of a variable is based on its distribution on the previous states. The variable in "Story Teller" is a chain of words that are followed by each word. Each word in a text is a node and it is assocciated with a certain amount of text following it. Based on this, we can caculate the possibility of what words can exist in the next state and consequently, generate a new text. 
+
+The main algorithm could be found in ```/src/pages/Home.js``` dierctory.
 
 ## Getting Started
 
