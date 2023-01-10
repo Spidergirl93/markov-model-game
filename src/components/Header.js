@@ -12,18 +12,15 @@ import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
 function Header() {
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="m">
         <Toolbar disableGutters>
-          <ModelTrainingIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-          />
+          <ModelTrainingIcon sx={{ mr: 1 }} />
           <Typography
-            variant="h6"
-            noWrap
-            component="a"
+            size="large"
+            edge="start"
+            color="inherit"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
@@ -31,7 +28,7 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            Markov Model
+            Story Teller
           </Typography>
         </Toolbar>
       </Container>
