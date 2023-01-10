@@ -42,6 +42,7 @@ const Home = (props) => {
 
     // The text will get generated until it reaches
     // to the last word in the input test
+    let counter = 1;
     for (;;) {
       // Get the possible next states
       let possibilities = ngrams[currentWord];
@@ -55,7 +56,14 @@ const Home = (props) => {
       result += next;
       // Get the last word of result
       currentWord = result.trim().split(" ").pop();
-      console.log(result);
+      console.log(
+        "The generated story in the ",
+        counter,
+        "th iteration:\n",
+        result
+      );
+      console.log("The node in the next iterarion: \n", currentWord);
+      counter++;
     }
 
     return result;
