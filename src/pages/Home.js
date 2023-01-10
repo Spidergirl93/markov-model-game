@@ -8,7 +8,7 @@ const Home = (props) => {
   const [modeledStory, setModeledStory] = useState("");
 
   const storyHandler = (txt) => {
-    const generatedStory = markovGenerator(txt, 10);
+    const generatedStory = markovGenerator(txt, 8);
     setModeledStory((prev) => generatedStory);
   };
 
@@ -40,13 +40,13 @@ const Home = (props) => {
     let currentWord = parsedTxt[0];
     let result = currentWord;
 
-    // The length of the generated text is defined here by
-    // setting the number of times that this loop occurs
-    for (let i = 0; i < parsedTxt.length; i++) {
+    // The text will get generated until it reaches
+    // to the last word in the input test
+    for (;;) {
       // Get the possible next states
       let possibilities = ngrams[currentWord];
       // To prevent printing just random numbers
-      if (!possibilities) {
+      if (!possibilities || possibilities[0] === "") {
         break;
       }
       // Pick a random element from the possible next transitions
