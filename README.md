@@ -4,6 +4,13 @@ Are you an author? Are you out of ideas? Are you seeking inspiration on what to 
 
 Feel free to try the application using [this link](https://markov-model-game.vercel.app/).
 
+
+## Demo 
+
+
+![Loading ...](demo/Demo.mp4)
+
+
 ## Description
 
 This web application is a simple implementation of Markov chain to generate new and hopefully meaningful texts from another text. Based on Markov chain, the current distribution of a variable is based on its distribution on the previous states. The variable in "Story Teller" is a chain of words that are followed by each word. Each word in a text is a node and it is assocciated with a certain amount of text following it. Based on this, we can caculate the possibility of what words can exist in the next state and consequently, generate a new text. 
@@ -45,4 +52,5 @@ Maryam Esmaeili Darestani [@Spidergirl93](https://github.com/Spidergirl93)
 ## Acknowledgments
 
 This project has been done as the final project in "Artificial Intelligence for Game Programming 2" in Upsalla University. 
+Inspired by [this video](https://www.youtube.com/watch?v=eGFJ8vugIWA). 
 
