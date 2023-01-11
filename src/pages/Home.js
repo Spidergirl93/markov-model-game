@@ -12,7 +12,7 @@ const Home = (props) => {
     setModeledStory((prev) => generatedStory);
   };
 
-  const markovGenerator = (txt, order = 3) => {
+  const markovGenerator = (txt, order) => {
     let ngrams = {};
     const parsedTxt = txt.match(/\b(\w+)\b/g);
 
@@ -21,7 +21,7 @@ const Home = (props) => {
       if (!ngrams[word]) {
         ngrams[word] = [];
       }
-      // Add the next 10 words as the possible next states
+      // Add the next 8 words as the possible next states
       // Having duplicates in this part is actually in our
       // favor since it increases the chance of the duplicted
       // word to be picked in the next part, therefore we don't
